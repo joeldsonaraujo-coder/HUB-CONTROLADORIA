@@ -83,3 +83,39 @@ body {
   color: #12395b;
   font-size: 24px;
 }
+.menu-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.menu-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu-link.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
+.header small {
+  color: #666;
+  font-size: 13px;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-date,
+.header-version {
+  background: #f4f6f8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+}

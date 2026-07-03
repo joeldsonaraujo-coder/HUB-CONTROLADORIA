@@ -1,3 +1,5 @@
+import Card from "../components/Card";
+
 function Home() {
   return (
     <main className="home">
@@ -9,22 +11,20 @@ function Home() {
       </p>
 
       <div className="cards">
+        <Card
+          titulo="📊 Sala de Situação"
+          descricao="Acompanhamento dos principais indicadores."
+        />
 
-        <div className="card">
-          <h3>📊 Sala de Situação</h3>
-          <p>Em desenvolvimento</p>
-        </div>
+        <Card
+          titulo="📈 DRE Gerencial"
+          descricao="Visualização da demonstração de resultados."
+        />
 
-        <div className="card">
-          <h3>📈 DRE Gerencial</h3>
-          <p>Em desenvolvimento</p>
-        </div>
-
-        <div className="card">
-          <h3>🤖 IA Analítica</h3>
-          <p>Em desenvolvimento</p>
-        </div>
-
+        <Card
+          titulo="🤖 IA Analítica"
+          descricao="Assistente inteligente para análises."
+        />
       </div>
     </main>
   );

@@ -1,12 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 const menuItems = [
-  "🏠 Home",
-  "📊 Sala de Situação",
-  "📈 DRE Gerencial",
-  "💰 Receitas",
-  "💳 Custos",
-  "📉 Despesas",
-  "📁 Centro de Custos",
-  "⚙ Configurações",
+  { label: "🏠 Home", path: "/" },
+  { label: "📊 Sala de Situação", path: "/dashboard" },
+  { label: "📈 DRE Gerencial", path: "/dre" },
+  { label: "⚙ Configurações", path: "/configuracoes" },
 ];
 
 function Sidebar() {
@@ -20,7 +18,16 @@ function Sidebar() {
       <nav>
         <ul>
           {menuItems.map((item) => (
-            <li key={item}>{item}</li>
+            <li key={item.path}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive ? "menu-link active" : "menu-link"
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
           ))}
         </ul>
       </nav>
