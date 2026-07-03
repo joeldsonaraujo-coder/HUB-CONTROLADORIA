@@ -1,11 +1,5 @@
 import { NavLink } from "react-router-dom";
-
-const menuItems = [
-  { label: "🏠 Home", path: "/" },
-  { label: "📊 Sala de Situação", path: "/dashboard" },
-  { label: "📈 DRE Gerencial", path: "/dre" },
-  { label: "⚙ Configurações", path: "/configuracoes" },
-];
+import { menuItems } from "../../data/menu";
 
 function Sidebar() {
   return (

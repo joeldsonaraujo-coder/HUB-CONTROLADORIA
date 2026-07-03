@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <div>
-        <h1>HUB de Controladoria</h1>
+        <h1>{appConfig.nome}</h1>
         <small>Painel Gerencial</small>
       </div>
 
@@ -14,7 +14,7 @@ function Header() {
         </div>
 
         <div className="header-version">
-          Versão 0.2
+         Versão {appConfig.versao}
         </div>
       </div>
     </header>
@@ -22,3 +22,4 @@ function Header() {
 }
 
 export default Header;
+import { appConfig } from "../../config/appConfig";

@@ -20,14 +20,17 @@ function Layout() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/dre" element={<DRE />} />
-          <Route path="/configuracoes" element={<Configuracoes />} />
-        </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/dre" element={<DRE />} />
+  <Route path="/configuracoes" element={<Configuracoes />} />
+
+  <Route path="*" element={<NotFound />} />
+</Routes>
       </div>
     </div>
   );
 }
 
 export default Layout;
+import NotFound from "../../pages/NotFound";

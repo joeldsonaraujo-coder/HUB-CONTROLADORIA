@@ -1,9 +1,10 @@
 import Card from "../components/Card";
+import { appConfig } from "../config/appConfig";
 
 function Home() {
   return (
     <main className="home">
-      <h2>Bem-vindo ao HUB de Controladoria</h2>
+      <h2>Bem-vindo ao {appConfig.nome}</h2>
 
       <p>
         Sistema inteligente para apoio à Controladoria,
