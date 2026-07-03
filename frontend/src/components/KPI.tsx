@@ -1,6 +1,7 @@
 type KPIProps = {
   titulo: string;
   valor: string;
+  variacao: string;
   status: "positivo" | "alerta" | "negativo";
 };
 
@@ -9,8 +10,13 @@ const cores = {
   alerta: "#f9a825",
   negativo: "#c62828",
 };
+const icones = {
+  positivo: "▲",
+  alerta: "➜",
+  negativo: "▼",
+};
 
-function KPI({ titulo, valor, status }: KPIProps) {
+function KPI({ titulo, valor, variacao, status }: KPIProps) {
   return (
     <div className="card">
       <span
@@ -25,10 +31,22 @@ function KPI({ titulo, valor, status }: KPIProps) {
       <h2
         style={{
           color: cores[status],
+          marginTop: "15px",
         }}
       >
         {valor}
       </h2>
+
+      <p
+  style={{
+    marginTop: "8px",
+    color: cores[status],
+    fontSize: "13px",
+    fontWeight: "bold",
+  }}
+>
+  {icones[status]} {variacao}
+</p>
     </div>
   );
 }

@@ -32,6 +32,7 @@
 
   box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
+
 .card h2 {
   margin-top: 15px;
   color: #12395b;
@@ -41,4 +42,19 @@
 .card h3 {
   color: #666;
   font-size: 16px;
+
+}
+.dashboard-filtros {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.dashboard-filtros select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d5dbe3;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
 }
